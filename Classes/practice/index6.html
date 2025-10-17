@@ -1,0 +1,76 @@
+<!--create a webpage with a button labelled click me . when the button enabled!  display an alert that says button clicked additionally add another feature that changes the background color of the webpage when the user hover over the page . the background color should change back to its original state when the mouse is moved  away . use javascript to handel these user interpretations and ensure that the code is well commented for clarity-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>interactions Page</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+      background-color: #f0f0f0; /* Original background */
+      transition: background-color 0.3s ease;
+    }
+
+    button {
+      padding: 12px 24px;
+      font-size: 18px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:disabled {
+      background-color: #bdc3c7;
+      cursor: not-allowed;
+    }
+
+    button:hover:enabled {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Interactive Webpage</h1>
+  <button id="clickBtn" disabled>Click Me</button>
+
+  <script>
+    // Get the button element
+    const button = document.getElementById('clickBtn');
+
+    // Enable the button after 2 seconds (simulation of user permission/event)
+    setTimeout(() => {
+      button.disabled = false;
+      button.textContent = "Click Me";
+      console.log("Button enabled!");
+    }, 2000); // 2000 ms = 2 seconds
+
+    // Add click event to the enabled button
+    button.addEventListener('click', () => {
+      if (!button.disabled) {
+        alert('Button clicked');
+      }
+    });
+
+    // Store original background color
+    const originalBackground = document.body.style.backgroundColor;
+
+    // Change background on mouse enter
+    document.body.addEventListener('mouseenter', () => {
+      document.body.style.backgroundColor = '#e6f7ff'; // light blue
+    });
+
+    // Revert background on mouse leave
+    document.body.addEventListener('mouseleave', () => {
+      document.body.style.backgroundColor = originalBackground;
+    });
+  </script>
+
+</body>
+</html>
+

@@ -1,0 +1,39 @@
+<!--design a user registration form with fields for first name, last name ,phone number and ensure these are validated correctly before submission  if any input is wrong then display the error below the corresponding error-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Registration Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>User Registration</h2>
+    <form id="registrationForm" novalidate>
+      <div class="form-group">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName">
+        <small class="error-message" id="firstNameError"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName">
+        <small class="error-message" id="lastNameError"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone" maxlength="10">
+        <small class="error-message" id="phoneError"></small>
+      </div>
+
+      <button type="submit">Register</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

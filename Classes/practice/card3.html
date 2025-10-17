@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Card</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: #fff;
+      width: 380px;       /* rectangular shape */
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: 0 6px 25px rgba(0,0,0,0.1);
+    }
+
+    /* Header with name + status */
+    .card-header {
+      text-align: center;
+      padding: 25px 20px 10px 20px;
+    }
+    .card-header .name {
+      font-size: 24px;
+      font-weight: 600;
+      color: #111;
+    }
+    .card-header .status {
+      margin-top: 6px;
+      font-size: 15px;
+      color: #555;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+    }
+    .status-icon {
+      width: 12px;
+      height: 12px;
+      background: #111;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    /* Middle image */
+    .card-image {
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+    }
+    .card-image img {
+      width: 240px;
+      height: 240px;
+      border-radius: 20px;
+      object-fit: cover;
+    }
+
+    /* Footer (username + button) */
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 22px 25px 22px;
+    }
+    .user-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .user-info img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+    }
+    .user-details {
+      font-size: 12px;
+      color: #666;
+      line-height: 1.2;
+    }
+    .user-details strong {
+      display: block;
+      font-size: 13px;
+      color: black;
+      font-weight: 500;
+    }
+
+    .add-btn {
+      background: black;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+    .add-btn:hover {
+      background: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <!-- Header -->
+    <div class="card-header">
+      <div class="name">Sienna Brooks</div>
+      <div class="status">
+        <span class="status-icon"></span>
+        Connecting
+      </div>
+    </div>
+
+    <!-- Image -->
+    <div class="card-image">
+      <img src="https://images.pexels.com/photos/619950/pexels-photo-619950.jpeg?cs=srgb&dl=pexels-pripicart-619950.jpg&fm=jpg" alt="profile">
+    </div>
+
+    <!-- Footer -->
+    <div class="card-footer">
+      <div class="user-info">
+        <img src="https://images.pexels.com/photos/619950/pexels-photo-619950.jpeg?cs=srgb&dl=pexels-pripicart-619950.jpg&fm=jpg" alt="avatar">
+        <div class="user-details">
+          <strong>@sienna32</strong>
+          12m ago
+        </div>
+      </div>
+      <button class="add-btn">+ Add member</button>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!--implement  a simple registration form with fields for name , email, and password . use javascript to validate the form before  submission , ensuring that the name is not empty the email is in the correct format and the password  has at least 8  characters if any field is invalid , display an error message below the corresponding input field
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      padding: 40px;
+    }
+
+    .form-container {
+      width: 350px;
+      margin: auto;
+      padding: 25px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .error {
+      color: red;
+      font-size: 13px;
+      margin-top: 3px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 15px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Register</h2>
+    <form id="registrationForm">
+      <label for="name">Name</label>
+      <input type="text" id="name" />
+      <div class="error" id="nameError"></div>
+
+      <label for="email">Email</label>
+      <input type="text" id="email" />
+      <div class="error" id="emailError"></div>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" />
+      <div class="error" id="passwordError"></div>
+
+      <button type="submit">Register</button>
+    </form>
+  </div>
+
+  <script>
+    // Get form and inputs
+    const form = document.getElementById('registrationForm');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const passwordInput = document.getElementById('password');
+
+    // Get error display divs
+    const nameError = document.getElementById('nameError');
+    const emailError = document.getElementById('emailError');
+    const passwordError = document.getElementById('passwordError');
+
+    // Email format pattern
+    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault(); // Prevent form submission
+
+      let isValid = true;
+
+      // Reset previous error messages
+      nameError.textContent = '';
+      emailError.textContent = '';
+      passwordError.textContent = '';
+
+      // Validate Name
+      if (nameInput.value.trim() === '') {
+        nameError.textContent = 'Name cannot be empty.';
+        isValid = false;
+      }
+
+      // Validate Email
+      if (!emailPattern.test(emailInput.value.trim())) {
+        emailError.textContent = 'Enter a valid email address.';
+        isValid = false;
+      }
+
+      // Validate Password
+      if (passwordInput.value.length < 8) {
+        passwordError.textContent = 'Password must be at least 8 characters long.';
+        isValid = false;
+      }
+
+      // Submit form if all fields are valid
+      if (isValid) {
+        alert('Registration successful!');
+        form.reset(); // Clear the form
+      }
+    });
+  </script>
+
+</body>
+</html>

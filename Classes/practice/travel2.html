@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jadoo</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: rgb(24, 181, 202);
+    }
+
+    /* Navigation */
+    nav {
+      margin: 0;
+      padding: 15px 30px;
+      background-color: azure;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .links a {
+      color: black;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav .links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Signup Box in Nav */
+    .signup-box {
+      background: #ff5722;
+      padding: 8px 15px;
+      border-radius: 8px;
+    }
+
+    .signup-box a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Background Image Section */
+    .hero {
+      background: url('https://img.freepik.com/free-photo/full-shot-travel-concept-with-landmarks_23-2149153258.jpg') no-repeat center center/cover;
+      color: white;
+      text-align: left;
+      padding: 100px 50px;
+      min-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hero h2 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .hero h1 {
+      font-size: 50px;
+      line-height: 1.2;
+      margin: 15px 0;
+    }
+
+    .hero h4 {
+      max-width: 500px;
+      font-weight: normal;
+      margin-bottom: 20px;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      padding: 12px 2px;
+      margin: 8px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: #ff9800;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #e68900;
+    }
+
+    .btn-video {
+      background: white;
+      color: black;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .btn-video:hover {
+      background: #ddd;
+    }
+
+    .btn-video span {
+      margin-left: 8px;
+      font-weight: bold;
+    }
+
+    .play-icon {
+      width: 18px;
+      height: 18px;
+      background: red;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 12px;
+      margin-right: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="links">
+      <a href="#Destinations">Destinations</a>
+      <a href="#Hotels">Hotels</a>
+      <a href="#Flights">Flights</a>
+      <a href="#Bookings">Bookings</a>
+      <a href="#login">Login</a>
+    </div>
+    <div class="signup-box">
+      <a href="#Signup">Signup</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>BEST DESTINATIONS AROUND THE WORLD</h2>
+    <h1>Travel, enjoy <br> and live a new <br> and full life</h1>
+    <h4>
+      Built wicket longer admire do barton vanity itself do in it.
+      Preferred to sportsmen it engrossed listening. Park gate sell
+      they west hard for the.
+    </h4>
+
+    <!-- Buttons -->
+    <a href="#more" class="btn btn-primary">Find Out More</a>
+    <a href="#demo" class="btn btn-video">
+      <div class="play-icon">▶</div>
+      <span>Watch Demo</span>
+    </a>
+  </section>
+
+</body>
+
+</html>

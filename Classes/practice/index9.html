@@ -1,0 +1,94 @@
+<!--create a webpage where a form allows the user to input their name and select favourite color from a dropdown list . upon submitting the form , use javascript display a greeting that includes their names and change the background color of the page to the selected color .use event listeners to handel the form submission and the background color change
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Color Greeting Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      transition: background-color 0.5s ease;
+      padding: 50px;
+    }
+
+    .form-container {
+      display: inline-block;
+      background-color: #ffffffcc;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input, select, button {
+      margin-top: 5px;
+      padding: 8px;
+      width: 200px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    #greeting {
+      margin-top: 30px;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Welcome!</h2>
+    <form id="colorForm">
+      <label for="name">Enter Your Name:</label>
+      <input type="text" id="name" required />
+
+      <label for="color">Select Your Favorite Color:</label>
+      <select id="color" required>
+        <option value="">--Choose a color--</option>
+        <option value="lightblue">Light Blue</option>
+        <option value="lightgreen">Light Green</option>
+        <option value="lavender">Lavender</option>
+        <option value="lightcoral">Light Coral</option>
+        <option value="lightgoldenrodyellow">Light Yellow</option>
+      </select>
+
+      <br><br>
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="greeting"></div>
+  </div>
+
+  <script>
+    // Get form elements
+    const form = document.getElementById('colorForm');
+    const nameInput = document.getElementById('name');
+    const colorSelect = document.getElementById('color');
+    const greetingDiv = document.getElementById('greeting');
+
+    // Event Listener for form submission
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent page reload
+
+      const name = nameInput.value.trim();
+      const color = colorSelect.value;
+
+      if (name && color) {
+        // Display greeting
+        greetingDiv.textContent = `Hello, ${name}!`;
+
+        // Change background color
+        document.body.style.backgroundColor = color;
+      }
+    });
+  </script>
+
+</body>
+</html>

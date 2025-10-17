@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Coffee</title>
+  <style>
+   
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: url("https://i.pinimg.com/1200x/1d/b2/80/1db28003546d95061eb9b2b5ded692f4.jpg") no-repeat center center fixed;
+      background-size: cover;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background: #1a0f0a;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #f3c693;
+    }
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .navbar a:hover {
+      color: #eecca4;
+    }
+
+   
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .hero h2 {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    .btn {
+      background: #f3c693;
+      color: #2b1a15;
+      border: none;
+      padding: 12px 25px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .btn:hover {
+      background: #e0b77f;
+    }
+
+   
+    .products {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 50px 20px;
+    }
+    .product-card {
+      background: #3b241c;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      width: 180px;
+      transition: all 0.3s ease; 
+    }
+    .product-card img {
+      width: 100px;
+      margin-bottom: 15px;
+    }
+    .product-card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .product-card p {
+      font-size: 18px;
+      color: #f3c693;
+    }
+
+    
+    .product-card:hover {
+      transform: translateY(-10px);  
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);  
+    }
+
+    
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #1a0f0a;
+      margin-top: 50px;
+    }
+    
+  </style>
+</head>
+<body>
+ 
+  <header class="navbar">
+    <h1 class="logo">Coffeeeeeee</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Customers</a></li>
+        <li><a href="#">Orders</a></li>
+      </ul>
+    </nav>
+  </header>
+
+ 
+  <section class="hero">
+    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. </h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, aspernatur enim consequatur earum est, magnam unde laborum.</p>
+    <button class="btn">Order</button>
+  </section>
+
+  
+  <section class="products">
+    <div class="product-card">
+      <img src="https://i.pinimg.com/736x/58/cb/2b/58cb2bf3ee8a7ba976a98c740563704b.jpg" alt="Cappuccino">
+      <h3>Cappuccino</h3>
+      <p>20 $</p>
+    </div>
+    <div class="product-card">
+      <img src="https://i.pinimg.com/736x/06/38/ac/0638acd86299c5ed40d26d0c7d1fc8ef.jpg" alt="Latte">
+      <h3>Latte</h3>
+      <p>30 $ </p>
+    </div>
+    <div class="product-card">
+      <img src="https://i.pinimg.com/736x/2d/62/fb/2d62fbfd272f5e2f6429b976a2552387.jpg" alt="Mocha">
+      <h3>Mocha</h3>
+      <p>40 $</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Coffeeeeeee's Coffee |............</p>
+  </footer>
+</body>
+</html>

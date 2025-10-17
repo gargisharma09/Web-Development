@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gargi Sharma | Portfolio</title>
+  <link rel="icon" href="https://img.icons8.com/fluency/48/artificial-intelligence.png" type="image/png">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+      scroll-behavior: smooth;
+      transition: background 0.5s, color 0.5s;
+    }
+    body.dark {
+      background-color: #121212;
+      color: #e4e4e4;
+    }
+    header {
+      position: relative;
+      background: linear-gradient(90deg, #4b6cb7, #182848);
+      color: #fff;
+      text-align: center;
+      padding: 120px 20px 80px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+    }
+    header p {
+      margin: 10px 0 20px;
+      font-size: 1.2rem;
+    }
+    nav {
+      background: #182848;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 10px 0;
+      flex-wrap: wrap;
+    }
+    nav ul li {
+      margin: 0 20px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: #ffd700;
+    }
+    #themeToggle {
+      margin-left: 20px;
+      background: #4b6cb7;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      padding: 8px 12px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    #themeToggle:hover {
+      background: #ffd700;
+      color: #182848;
+    }
+    section {
+      padding: 80px 20px;
+      max-width: 1100px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.2rem;
+      color: #444;
+      position: relative;
+    }
+    h2::after {
+      content: '';
+      width: 70px;
+      height: 3px;
+      background: #4b6cb7;
+      display: block;
+      margin: 12px auto 0;
+      border-radius: 2px;
+    }
+    .skills, .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+    }
+    .card.dark {
+      background: #1e1e1e;
+      color: #e4e4e4;
+    }
+    .project-links a {
+      display: inline-block;
+      margin: 10px 10px 0 0;
+      padding: 8px 16px;
+      background: #4b6cb7;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      transition: background 0.3s;
+    }
+    .project-links a:hover {
+      background: #182848;
+    }
+    footer {
+      background: #182848;
+      color: #fff;
+      text-align: center;
+      padding: 1.2rem;
+      margin-top: 50px;
+    }
+    a.button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: #4b6cb7;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    a.button:hover {
+      background: #182848;
+    }
+    /* Timeline */
+    .timeline {
+      position: relative;
+      margin: 20px 0;
+      padding: 0;
+      list-style: none;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: #4b6cb7;
+      transform: translateX(-50%);
+    }
+    .timeline-item {
+      position: relative;
+      width: 50%;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .timeline-item:nth-child(odd) { left: 0; }
+    .timeline-item:nth-child(even) { left: 50%; }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      top: 20px;
+      right: -10px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #fff;
+      border: 3px solid #4b6cb7;
+      z-index: 1;
+    }
+    .timeline-item:nth-child(even)::before { left: -10px; }
+    .timeline-content {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .timeline-content.dark { background: #1e1e1e; color: #e4e4e4; }
+    @media(max-width: 768px) {
+      .timeline::before { left: 8px; }
+      .timeline-item { width: 100%; padding-left: 40px; margin-bottom: 20px; }
+      .timeline-item:nth-child(even) { left: 0; }
+      .timeline-item::before { left: 0; right: auto; }
+    }
+    /* Scroll to top */
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #4b6cb7;
+      color: white;
+      border: none;
+      padding: 12px 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: background 0.3s;
+    }
+    #scrollTopBtn:hover { background: #182848; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="content">
+      <h1>Gargi Sharma</h1>
+      <p>AI & ML Enthusiast | Data Visualization | Research in Neurotech</p>
+      <a href="#contact" class="button">Get in Touch</a>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button id="themeToggle">☀</button>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p style="text-align:center; max-width:800px; margin:auto;">Hello! I am Gargi Sharma, pursuing a Bachelor's in Computer Applications specializing in Artificial Intelligence and Machine Learning. I am passionate about Machine Learning, Data Visualization, and innovative research in Neurotechnology. I enjoy building impactful projects and continuously upgrading my skills.</p>
+    <div style="text-align:center;">
+      <a href="Gargi_Sharma_Resume.pdf" class="button" download>Download Resume</a>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="card"><h3>Technical</h3><p>Python, C++, SQL, Machine Learning, Data Visualization (Pandas, Matplotlib, Seaborn, Plotly, Folium)</p></div>
+      <div class="card"><h3>Tools & Platforms</h3><p>IBM Watson Studio, Jupyter Notebook, GitHub</p></div>
+      <div class="card"><h3>Soft Skills</h3><p>Problem-solving, Teamwork, Communication</p></div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Oral Cancer Prediction</h3>
+        <p>Machine learning project predicting oral cancer risk using datasets. Applied preprocessing, model training, and evaluation.</p>
+        <div class="project-links">
+          <a href="#">GitHub</a>
+          <a href="#">Live Demo</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Riots & Protests Visualization</h3>
+        <p>Data visualization project analyzing riots and protests in India (2016–2022) using Matplotlib, Seaborn, and Folium.</p>
+        <div class="project-links">
+          <a href="#">GitHub</a>
+          <a href="#">Live Demo</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>E-commerce Fashion Website</h3>
+        <p>Front-end website built with HTML, CSS, and JavaScript showcasing an interactive shopping experience.</p>
+        <div class="project-links">
+          <a href="#">GitHub</a>
+          <a href="#">Live Demo</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Patent Work</h3>
+        <p>Filed patent: Hybrid neurochip usage for psychiatric disorders (Team project).</p>
+        <div class="project-links">
+          <a href="#">Details</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="achievements">
+    <h2>Achievements</h2>
+    <ul class="timeline">
+      <li class="timeline-item"><div class="timeline-content"><h3>Patent</h3><p>Hybrid neurochip usage for Psychiatric Disorders.</p></div></li>
+      <li class="timeline-item"><div class="timeline-content"><h3>Certifications</h3><p>Python Programming Certification, Machine Learning Certification.</p></div></li>
+      <li class="timeline-item"><div class="timeline-content"><h3>Academic Projects</h3><p>Multiple ML and Data Visualization academic projects delivered successfully.</p></div></li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <form style="max-width:600px; margin:auto; display:grid; gap:15px;">
+      <input type="text" placeholder="Your Name" required style="padding:10px; border-radius:6px; border:1px solid #ccc;">
+      <input type="email" placeholder="Your Email" required style="padding:10px; border-radius:6px; border:1px solid #ccc;">
+      <textarea placeholder="Your Message" rows="5" required style="padding:10px; border-radius:6px; border:1px solid #ccc;"></textarea>
+      <button type="submit" class="button">Send Message</button>
+    </form>
+    <p style="text-align:center; margin-top:20px;">Or connect with me directly:</p>
+    <p style="text-align:center;">Email: <a href="mailto:sharma931g@gmail.com">sharma931g@gmail.com</a></p>
+    <p style="text-align:center;">LinkedIn: <a href="https://www.linkedin.com/in/gargi-sharma-171a14283" target="_blank">linkedin.com/in/gargi-sharma</a></p>
+    <p style="text-align:center;">GitHub: <a href="https://github.com/gargisharma09" target="_blank">github.com/gargisharma09</a></p>
+  </section>
+
+  <footer><p>© 2025 Gargi Sharma | Portfolio</p></footer>
+
+  <button id="scrollTopBtn" onclick="window.scrollTo({top:0, behavior:'smooth'})">↑</button>
+
+  <script>
+    const scrollBtn = document.getElementById("scrollTopBtn");
+    const themeToggle = document.getElementById("themeToggle");
+
+    window.onscroll = () => {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        scrollBtn.style.display = "block";
+      } else {
+        scrollBtn.style.display = "none";
+      }
+    };
+
+    const sections = document.querySelectorAll("section");
+    const revealOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.85;
+      sections.forEach(sec => {
+        const rect = sec.getBoundingClientRect();
+        if (rect.top < triggerBottom) {
+          sec.classList.add("visible");
+        }
+      });
+    };
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll();
+
+    // Dark mode toggle
+    themeToggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      document.querySelectorAll(".card").forEach(c => c.classList.toggle("dark"));
+      document.querySelectorAll(".timeline-content").forEach(c => c.classList.toggle("dark"));
+      themeToggle.textContent = document.body.classList.contains("dark") ? "🌙" : "☀";
+    });
+  </script>
+</body>
+</html>

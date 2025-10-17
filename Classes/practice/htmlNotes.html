@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title -->
+    <title>Document</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Heading Tags -->
+    <h1>My Bookmarks - h1</h1>
+    <h2>Main Bookmarks - h2</h2>
+    <h3>Main Bookmarks - h3</h3>
+    <h4>Main Bookmarks - h4</h4>
+    <h5>Main Bookmarks - h5</h5>
+    <h6>Main Bookmarks - h6</h6>
+    <hr />
+
+    <!-- Paragraph Tag -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <hr />
+    <!-- Anchor Tag - Bookmark Manager -->
+    <h1>My Bookmarks</h1>
+    <h2>Primary Bookmarks</h2>
+    <p><a target="_blank" href="https://www.google.com">Open Google</a></p>
+    <p><a target="_blank" href="https://www.facebook.com">Open Facebook</a></p>
+    <p><a target="_blank" href="https://www.quora.com">Open Quora</a></p>
+    <p>
+      <a target="_blank" href="https://www.codewithharry.com"
+        >Open CodeWithHarry</a
+      >
+    </p>
+    <p><a target="_blank" href="https://www.youtube.com">Open YouTube</a></p>
+
+    <h2>Secondary Bookmarks</h2>
+    <p>
+      <a target="_blank" href="https://www.wikipedia.com">Open Wikipedia</a>
+    </p>
+    <p>
+      <a target="_blank" href="https://www.stackoverflow.com"
+        >Open Stackoverflow</a
+      >
+    </p>
+    <hr />
+
+    <!-- Image -->
+    <img height="230" src="image.png" alt="Train image" />
+    <hr />
+
+    <!-- Table Tags -->
+    <table>
+      <caption>
+        Employee Details
+      </caption>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Designation</th>
+          <th>Fav Language</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Harry</td>
+          <td>Programmer</td>
+          <td>JavaScript</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">Sam</td>
+          <td rowspan="2">Java</td>
+        </tr>
+        <tr>
+          <td colspan="2">Sam</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2">Sam</td>
+          <td rowspan="2">foot</td>
+        </tr>
+      </tfoot>
+    </table>
+    <hr />
+
+    <!-- Lists -->
+    <ul type="square">
+      <li>Harry</li>
+      <li>Rohan</li>
+      <li>Shubham</li>
+    </ul>
+    <ol type="A">
+      <li>Carry</li>
+      <li>Boston</li>
+      <li>Diago</li>
+    </ol>
+    <hr />
+
+    <!-- Forms -->
+    <form action="post">
+      <div>
+        <label for="username">Enter your Username</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Enter your username"
+          required
+          autofocus
+        />
+      </div>
+      <div>
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="male" />
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female" />
+        <label for="female">Female</label>
+      </div>
+      <div>
+        <input type="checkbox" id="subscribe" name="subscribe" value="yes" />
+        <label for="subscribe">Subscribe to newsletter</label>
+      </div>
+      <div>
+        <label for="comment">Enter your comment</label>
+        <textarea
+          id="comment"
+          name="comment"
+          rows="4"
+          placeholder="Write your comment..."
+        ></textarea>
+      </div>
+      <div>
+        <label for="fruits">Choose a fruit:</label>
+        <select name="fruits" id="fruits">
+          <option value="apple">Apple</option>
+          <option value="banana">Banana</option>
+          <option value="cherry">Cherry</option>
+        </select>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    <hr />
+
+    <!-- DIV/SPAN -->
+    <p style="background-color: aquamarine">Hey I am a para</p>
+    <a href="https://google.com" style="background-color: rgb(242, 160, 122)"
+      >Google</a
+    >
+    <div style="background-color: yellow">I am a block element</div>
+    <span style="background-color: rgb(198, 165, 230)"
+      >I am span and I am inline</span
+    >
+    <a href="" style="background-color: rgb(242, 160, 122)">yes he is inline</a>
+    <hr />
+
+    <!-- ID CLASS -->
+    <div id="firstdiv" class="red">First</div>
+    <div id="seconddiv">Second</div>
+    <span id="span" class="red">Red</span>
+    <hr />
+
+    <!-- VIDEO -->
+    <video
+      src="video.mp4"
+      height="255"
+      controls
+      loop
+      muted
+      poster="download.jpg"
+    ></video>
+    <hr />
+
+    <!-- Audio -->
+    <audio src="sachin.mp3" controls autoplay loop muted></audio>
+    <hr />
+
+    <!-- SVG - Shape -->
+    <svg height="100" width="100">
+      <circle
+        cx="50"
+        cy="50"
+        r="40"
+        stroke="black"
+        stroke-width="3"
+        fill="red"
+      />
+    </svg>
+    <hr />
+
+    <!-- IFrames -->
+    <iframe
+      src="https://www.codewithharry.com/tutorial/html-iframes/"
+      width="322"
+      height="444"
+    ></iframe>
+    <hr />
+
+    <!-- Semantic Tags -->
+    <header>
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>What are Semantic Tags</h1>
+    </main>
+
+    <footer>Copyright CWH | All rights reserved</footer>
+    <hr />
+    
+    
+    <!-- ENTITIES/CODETAGS ETC -->
+    3>4 this is the code for paragraph &lt;p&gt;&lt;/p&gt;
+    <pre>
+        <p>This is a para</p>
+
+
+
+        this is after few new lines           and some more
+    </pre>
+
+    Copyright &copy;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;codewithharry
+
+    <blockquote cite="source-url">Quotation text here.</blockquote>
+    <h1>This is html boilerplate code</h1>
+    <pre>
+        <code>
+            &lt;!DOCTYPE html&gt;
+            &lt;html lang="en"&gt;
+            &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;Document&lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+            
+            &lt;/body&gt;
+            &lt;/html&gt;
+        </code>
+    </pre>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+  </body>
+</html>

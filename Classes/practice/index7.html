@@ -1,0 +1,130 @@
+<!--create  a webpage that showcase a simple product listing . the page should include a heading for the product category , five product cards (each with an image product name and description ) and a footer with social media links .style the product cards using css to ensure they are alignd in a row and add hover effects to each card such as a slight shadow or border change when the mouse moves over them
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Listing</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .product-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px 20px;
+      gap: 20px;
+    }
+
+    .product-card {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      width: 200px;
+      text-align: center;
+      padding: 15px;
+      transition: box-shadow 0.3s, border-color 0.3s;
+    }
+
+    .product-card:hover {
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      border-color: #3498db;
+    }
+
+    .product-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }
+
+    .product-card h3 {
+      margin: 10px 0 5px;
+      color: #2c3e50;
+    }
+
+    .product-card p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    .social-icons a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .social-icons a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Featured Electronics</h1>
+  </header>
+
+  <div class="product-container">
+    <div class="product-card">
+      <img src="https://via.placeholder.com/200x150" alt="Product 1">
+      <h3>Smartphone</h3>
+      <p>High performance smartphone with long battery life.</p>
+    </div>
+    <div class="product-card">
+      <img src="https://via.placeholder.com/200x150" alt="Product 2">
+      <h3>Laptop</h3>
+      <p>Lightweight laptop ideal for work and play.</p>
+    </div>
+    <div class="product-card">
+      <img src="https://via.placeholder.com/200x150" alt="Product 3">
+      <h3>Headphones</h3>
+      <p>Noise-cancelling headphones with rich sound.</p>
+    </div>
+    <div class="product-card">
+      <img src="https://via.placeholder.com/200x150" alt="Product 4">
+      <h3>Smartwatch</h3>
+      <p>Stay connected and track your fitness goals.</p>
+    </div>
+    <div class="product-card">
+      <img src="https://via.placeholder.com/200x150" alt="Product 5">
+      <h3>Camera</h3>
+      <p>Capture stunning photos with this compact camera.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>Connect with us:</p>
+    <div class="social-icons">
+      <a href="#">Facebook</a> |
+      <a href="#">Twitter</a> |
+      <a href="#">Instagram</a>
+    </div>
+  </footer>
+
+</body>
+</html>

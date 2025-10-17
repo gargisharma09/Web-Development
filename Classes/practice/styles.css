@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Make sure footer stays at the bottom */
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header */
+  header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  /* Navigation bar */
+  nav {
+    background-color: #444;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 14px 10px;
+    display: inline-block;
+  }
+  
+  nav ul li a:hover {
+    background-color: #666;
+    border-radius: 4px;
+  }
+  
+  /* Main content */
+  main {
+    flex: 1;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  main img {
+    width: 300px; /* Fixed width */
+    margin-top: 1rem;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  

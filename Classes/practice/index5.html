@@ -1,0 +1,61 @@
+<!--create a webpage with a button labelled click me . when the button is clicked display an alert that says button clicked additionally add another feature that changes the background color of the webpage when the user hover over the page . the background color should change back to its original state when the mouse is moved  away . use javascript to handel these user interpretations and ensure that the code is well commented for clarity-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Webpage</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+      background-color: #f2f2f2; /* Original background */
+      transition: background-color 0.3s ease;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Interactive Page</h1>
+  <button id="clickBtn">Click Me</button>
+
+  <script>
+    // Get reference to the button
+    const button = document.getElementById('clickBtn');
+
+    // Add click event listener to show an alert
+    button.addEventListener('click', function () {
+      alert('Button clicked');
+    });
+
+    // Store the original background color
+    const originalColor = document.body.style.backgroundColor;
+
+    // When mouse enters the body, change background color
+    document.body.addEventListener('mouseenter', function () {
+      document.body.style.backgroundColor = '#d1f0ff'; // Light blue
+    });
+
+    // When mouse leaves the body, restore the original background color
+    document.body.addEventListener('mouseleave', function () {
+      document.body.style.backgroundColor = originalColor;
+    });
+  </script>
+
+</body>
+</html>
+
