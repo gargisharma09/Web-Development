@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wanderlust Adventures</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#f9fafb] text-[#1e293b] font-sans">
+
+ 
+  <header class="shadow-md sticky top-0 z-50 bg-gradient-to-r from-sky-500 to-indigo-600">
+    <nav class="flex items-center justify-between px-10 py-4 text-white">
+      <h1 class="text-2xl font-extrabold tracking-wide">Wanderlust Adventures</h1>
+      <ul class="flex gap-6 font-medium">
+        <li><a href="index.html" class="hover:text-pink-300 transition">Home</a></li>
+      <li><a href="#destinations" class="hover:text-pink-300 transition">Destinations</a></li>
+      <li><a href="about.html" class="hover:text-pink-300 transition">About</a></li>
+      <li><a href="contact.html" class="hover:text-pink-300 transition">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  
+  <section id="home" class="relative text-center py-28 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb');">
+    <div class="bg-black bg-opacity-50 absolute inset-0"></div>
+    <div class="relative z-10 text-white">
+      <h2 class="text-5xl font-extrabold mb-6 leading-tight drop-shadow-lg">Discover The World, One Journey At A Time</h2>
+      <p class="text-lg mb-8 max-w-xl mx-auto text-gray-200">Your next adventure awaits — explore stunning destinations, cultures, and experiences.</p>
+      <button class="bg-pink-500 text-white px-8 py-3 font-semibold rounded-full shadow-md hover:bg-pink-600 hover:shadow-lg transition transform hover:scale-105">Start Exploring</button>
+    </div>
+  </section>
+
+ 
+  <section id="destinations" class="py-20 px-8 text-center bg-[#f9fafb]">
+    <h2 class="text-4xl font-extrabold mb-12 text-sky-700">Top Destinations</h2>
+    <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+
+    
+      <div class="bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition duration-300">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Maldives" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-3 text-sky-600">Maldives</h3>
+          <p class="text-gray-600 mb-5">Experience paradise on earth with turquoise waters and endless white sands.</p>
+          <button class="bg-sky-500 text-white px-6 py-2 rounded-full hover:bg-sky-600 transition">Book Now</button>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition duration-300">
+        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Switzerland" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-3 text-sky-600">Switzerland</h3>
+          <p class="text-gray-600 mb-5">Breathtaking views of alpine peaks and serene lakes for every nature lover.</p>
+          <button class="bg-sky-500 text-white px-6 py-2 rounded-full hover:bg-sky-600 transition">Book Now</button>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition duration-300">
+        <img src="https://images.unsplash.com/photo-1558981285-6f0c94958bb6" alt="Tokyo" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-3 text-sky-600">Tokyo</h3>
+          <p class="text-gray-600 mb-5">Dive into a city where tradition meets innovation — Japan’s electric capital.</p>
+          <button class="bg-sky-500 text-white px-6 py-2 rounded-full hover:bg-sky-600 transition">Book Now</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="py-24 text-center bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 text-white">
+    <h2 class="text-4xl font-bold mb-4">Join Our Travel Community 🌍</h2>
+    <p class="mb-8 text-lg text-gray-100">Get exclusive deals, destination guides, and inspiration in your inbox.</p>
+    <form class="flex justify-center gap-4 max-w-xl mx-auto">
+      <input type="email" placeholder="Enter your email" class="px-4 py-2 rounded-full text-gray-800 w-2/3 focus:outline-none focus:ring-2 focus:ring-pink-400">
+      <button type="submit" class="bg-emerald-500 text-white px-6 py-2 rounded-full font-semibold hover:bg-emerald-600 transition transform hover:scale-105">Subscribe</button>
+    </form>
+  </section>
+
+
+  <footer class="bg-gray-900 text-gray-300 py-8 text-center">
+    <p class="text-sm mb-2">© 2025 Wanderlust Adventures | All Rights Reserved.</p>
+    <p class="text-xs">Designed by Gargi Sharma</p>
+  </footer>
+
+</body>
+</html>
