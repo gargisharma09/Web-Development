@@ -12,17 +12,17 @@ function Home() {
     }
   }, []);
 
-  // Save passwords to localStorage whenever they change
+
   useEffect(() => {
     localStorage.setItem("passwords", JSON.stringify(passwords));
   }, [passwords]);
 
-  // Add a new password
+
   const addPassword = (passwordObj) => {
-    setPasswords([...passwords, passwordObj]);
+    setPasswords([passwords, passwordObj]);
   };
 
-  // Delete password
+ 
   const deletePassword = (id) => {
     setPasswords(passwords.filter((item) => item.id !== id));
   };
