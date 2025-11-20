@@ -2,15 +2,15 @@ import { useState } from "react";
 
 function PasswordList({ passwords, deletePassword }) {
 
-  // Track which passwords are visible
+ 
   const [visibleIds, setVisibleIds] = useState([]);
 
-  // Toggle password visibility
+  
   const toggleVisibility = (id) => {
     if (visibleIds.includes(id)) {
       setVisibleIds(visibleIds.filter((x) => x !== id));
     } else {
-      setVisibleIds([...visibleIds, id]);
+      setVisibleIds([visibleIds, id]);
     }
   };
 

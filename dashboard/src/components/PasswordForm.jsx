@@ -1,27 +1,25 @@
 import { useState } from "react";
 
 function PasswordForm({ addPassword }) {
-  // Step 1: Create state variables for input fields
+  
   const [appName, setAppName] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  // Step 2: Handle form submission
+  
   const handleAddPassword = () => {
     if (!appName || !username || !password) {
       alert("All fields are required!");
       return;
     }
 
-    // Pass data to parent component
+   
     addPassword({
       id: Date.now(),
       appName,
       username,
       password,
     });
-
-    // Step 3: Clear inputs after submit
     setAppName("");
     setUsername("");
     setPassword("");
